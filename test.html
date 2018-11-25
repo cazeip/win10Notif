@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Win10 Notif</title>
+	<link rel="stylesheet" href="winnotif.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="winnotif.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+		.w3-card{
+			border-radius: 10px;
+		}
+		#not{
+			position: fixed;
+			padding: 15px;
+			bottom: 7%;
+			right: 100%;
+			background-color: #333;
+			font-family: Arial;
+			font-size: 40px;
+			color: white;
+			animation: open 0.5s forwards;
+			display: none;
+			width: 20%;
+		}
+		@keyframes open{
+			100% { right: 5%; }
+		}
+		#title,#body{
+			margin:0px;
+		}code{
+			background: #333;
+			color: white;
+			padding: 3px;
+			border-radius: 3px;
+		}body{
+			background-image: url(http://hdqwalls.com/wallpapers/small-memory-lp.jpg);
+			background-position: center;
+			background-attachment: fixed; 
+			background-size: cover;
+		}
+		.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+	</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+ <a>Win10 Notifications</a>
+  <a href="#install">Installation</a>
+  <a href="#exec">Execute</a>
+  <a href="#dwn">Download</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+	<div  style="background-color:  teal ;padding: 10px ;">
+		<br><br>
+<h1 id="install">How to install win10 notifications :</h1>
+
+<h2>1. Copy the files</h2>
+
+<p>So, after downloading the files, copy the files :</p>
+<code>winnotif.js</code> and <code>winnotif.css</code> that are included.
+
+<h2>2. Import the files with :</h2>
+
+	<div class="w3-panel w3-card w3-light-grey"> 
+	  <h4>HTML Import Code</h4>
+	  <div class="w3-code htmlHigh notranslate">
+   		
+		&lt;link rel="stylesheet" href="winnotif.css"&gt;<br>
+	&lt;script type="text/javascript" src="winnotif.js"&gt;&lt;/script&gt;<br>
+	  </div>
+	</div>
+
+<h2>3. Setup the code :</h2>
+<p>It's quite easy since you just have to copy a small element that will do everything</p>
+	<div class="w3-panel w3-card w3-light-grey"> 
+	  <h4>HTML Setup Code</h4>
+	  <div class="w3-code htmlHigh notranslate">
+   		&lt;div id="not"&gt;<br>
+			&lt;p id="title"&gt;&lt;/p&gt;<br>
+			&lt;p id="body" style="font-size: 16px;"&gt;&lt;/p&gt;<br>
+		&lt;/div&gt;<br>
+	  </div>
+	</div>
+</div>
+
+<div style="height: 500px;">
+	
+</div>
+<div style="	background-color: #6110a0;padding: 10px ;">
+<h2 id="exec">4. Use it</h2>
+<p>We finally finished ! (Well, we won't say it was hard).
+To show the notifiaction, you have to execute the following javascript:</p>
+
+<div class="w3-panel w3-card w3-light-grey"> 
+  <h4>JavaScript Win10 Notifications Code</h4>
+  <div class="w3-code jsHigh notranslate">
+    //Okay so, to show a simple notification, you put this code :<br>
+    notif("It's a notif");<br><br>
+    //If you want a body text in the notification, jus put this code<br>
+    notif("Title","Put some body...");<br><br>
+    //Finally, let's change the dissapear delay... It is by default 10 seconds<br>
+    notif("Title","Put some body...",1); //Note: the duration is expressed in seconds
+  </div>
+</div>
+<p>Lets try them one by one :</p>
+<div class="w3-row-padding w3-grayscale">
+<button class="w3-col m4 w3-margin-bottom" onclick="notif('It\'s a notif');">First</button>
+<button class="w3-col m4 w3-margin-bottom" onclick="notif('Title','Put some body...');">Second</button>
+<button class="w3-col m4 w3-margin-bottom" onclick="notif('Title','Put some body...',1);">Third</button>
+</div>
+</div>
+<div style="height: 200px;">
+	
+</div>
+<div style="	background-color: #ae6d0c;padding: 10px ;">
+	<h1 id="dwn">Download :</h1>
+
+	<p>Well, you have to install it, obviously</p>
+	<p>It's here :</p>
+	<a href="Win10Notif.zip"><button>Download</button></a>
+</div>
+
+<div id="not">
+	<p id="title"></p>
+	<p id="body" style="font-size: 16px;"></p>
+</div>
+
+<script type="text/javascript">
+	function notif(title,content="",time=10){
+		time=time*1000;
+		document.getElementById("title").innerHTML = title;
+		document.getElementById("body").innerHTML = content;
+		document.getElementById("not").style.display = 'block';
+		setTimeout(function() {
+			document.getElementById("not").style.display = 'none';
+		}, time);
+	}
+</script>
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+<script>
+w3CodeColor();
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</body>
+</html>
